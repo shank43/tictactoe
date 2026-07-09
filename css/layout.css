@@ -1,99 +1,238 @@
-/* layout.css — Page and section layout */
-body {
-  font-family: var(--font-body);
-  color: var(--text);
-  background: var(--bg);
+/* ==========================================
+   LAYOUT.CSS
+   Premium Glassmorphism Layout
+========================================== */
+
+body{
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--bg);
+    background-attachment: fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
 }
 
-.ttt-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 2.5rem 1.5rem;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  user-select: none;
+/* Main Container */
+
+.ttt-wrap{
+
+    width:100%;
+    max-width:560px;
+
+    padding:35px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:22px;
+
+    border-radius:28px;
+
+    background:var(--surface);
+
+    backdrop-filter:var(--blur);
+
+    -webkit-backdrop-filter:var(--blur);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
 }
 
-/* Title */
-.ttt-title {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--text);
-  text-align: center;
-}
-.ttt-title span {
-  color: var(--x-color);
+.ttt-wrap:hover{
+
+    box-shadow:var(--shadow-hover);
+
 }
 
-/* Mode buttons row */
-.mode-row {
-  display: flex;
-  gap: 0.5rem;
+/* =====================
+      TITLE
+====================== */
+
+.ttt-title{
+
+    font-family:var(--font-display);
+
+    font-size:2.4rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    color:var(--text);
+
 }
 
-/* Difficulty row */
-.difficulty-row {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-  display: none; /* shown via JS when CPU mode active */
+.ttt-title span{
+
+    color:var(--x-color);
+
+    text-shadow:0 0 18px var(--x-glow);
+
 }
 
-/* Scoreboard */
-.score-bar {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* =====================
+      MODE BUTTONS
+====================== */
+
+.mode-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
 }
 
-.score-sep {
-  font-size: 1.4rem;
-  color: var(--text-muted);
-  font-weight: 300;
+/* =====================
+    DIFFICULTY
+====================== */
+
+.difficulty-row{
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
 }
 
-/* Status row */
-.status-row {
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =====================
+      SCORE BOARD
+====================== */
+
+.score-bar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
 }
 
-/* Board */
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+.score-sep{
+
+    color:var(--text-muted);
+
+    font-size:1.6rem;
+
 }
 
-/* Hint */
-.hint-row {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  letter-spacing: 0.03em;
-  text-align: center;
-  height: 18px;
-  transition: opacity 0.3s;
+/* =====================
+      STATUS
+====================== */
+
+.status-row{
+
+    min-height:34px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
 
-/* Buttons */
-.btn-row {
-  display: flex;
-  gap: 0.6rem;
+/* =====================
+      BOARD
+====================== */
+
+.board{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:14px;
+
 }
 
-/* History dots bar */
-.history-bar {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 340px;
-  min-height: 14px;
+/* =====================
+      HINT
+====================== */
+
+.hint-row{
+
+    text-align:center;
+
+    font-size:.85rem;
+
+    color:var(--text-muted);
+
+    min-height:22px;
+
+}
+
+/* =====================
+      BUTTONS
+====================== */
+
+.btn-row{
+
+    display:flex;
+
+    gap:14px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+/* =====================
+      HISTORY
+====================== */
+
+.history-bar{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    min-height:16px;
+
+    max-width:420px;
+
+}
+
+/* =====================
+      FOOTER
+====================== */
+
+.footer{
+
+    color:var(--text-muted);
+
+    font-size:.75rem;
+
+    text-align:center;
+
 }

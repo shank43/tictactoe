@@ -1,64 +1,310 @@
-/* responsive.css — Mobile breakpoints */
+/* ==========================================
+   RESPONSIVE.CSS
+   Premium Responsive Layout
+========================================== */
 
-/* Small phones */
-@media (max-width: 420px) {
-  .cell {
-    width: 88px;
-    height: 88px;
-  }
-  .mark {
-    font-size: 2.3rem;
-  }
-  .score-box {
-    min-width: 68px;
-    padding: 0.6rem 1rem;
-  }
-  .score-num {
-    font-size: 1.6rem;
-  }
-  .ttt-title {
-    font-size: 1.3rem;
-  }
-  .history-bar {
-    max-width: 280px;
-  }
+/* ==========================
+      Large Desktop
+========================== */
+
+@media (min-width:1200px){
+
+    .ttt-wrap{
+
+        max-width:640px;
+
+        padding:40px;
+
+    }
+
+    .cell{
+
+        width:130px;
+        height:130px;
+
+    }
+
+    .mark{
+
+        font-size:3.8rem;
+
+    }
+
 }
 
-/* Very small phones */
-@media (max-width: 340px) {
-  .cell {
-    width: 76px;
-    height: 76px;
-  }
-  .mark {
-    font-size: 1.9rem;
-  }
-  .board {
-    gap: 5px;
-  }
-  .score-bar {
-    gap: 0.6rem;
-  }
+/* ==========================
+      Laptop
+========================== */
+
+@media (max-width:992px){
+
+    .ttt-wrap{
+
+        max-width:540px;
+
+        padding:30px;
+
+    }
+
+    .cell{
+
+        width:110px;
+        height:110px;
+
+    }
+
 }
 
-/* Landscape phones — allow side-by-side layout */
-@media (max-height: 500px) and (orientation: landscape) {
-  .ttt-wrap {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-    padding: 1rem;
-  }
-  .ttt-title {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-  .cell {
-    width: 80px;
-    height: 80px;
-  }
-  .mark {
-    font-size: 2rem;
-  }
+/* ==========================
+      Tablet
+========================== */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .ttt-wrap{
+
+        width:100%;
+
+        max-width:480px;
+
+        padding:24px;
+
+        gap:18px;
+
+    }
+
+    .ttt-title{
+
+        font-size:2rem;
+
+    }
+
+    .board{
+
+        gap:12px;
+
+    }
+
+    .cell{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .mark{
+
+        font-size:3rem;
+
+    }
+
+    .score-bar{
+
+        gap:10px;
+
+    }
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media (max-width:576px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .ttt-wrap{
+
+        padding:20px;
+
+        border-radius:22px;
+
+    }
+
+    .ttt-title{
+
+        font-size:1.8rem;
+
+    }
+
+    .mode-row,
+    .btn-row,
+    .difficulty-row{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+    }
+
+    .mode-btn,
+    .ctrl-btn,
+    .diff-btn{
+
+        width:100%;
+
+    }
+
+    .score-bar{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .score-sep{
+
+        display:none;
+
+    }
+
+    .score-box{
+
+        width:100%;
+
+    }
+
+    .board{
+
+        gap:10px;
+
+    }
+
+    .cell{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .mark{
+
+        font-size:2.7rem;
+
+    }
+
+}
+
+/* ==========================
+      Small Phones
+========================== */
+
+@media (max-width:400px){
+
+    .ttt-wrap{
+
+        padding:16px;
+
+    }
+
+    .ttt-title{
+
+        font-size:1.6rem;
+
+    }
+
+    .board{
+
+        gap:8px;
+
+    }
+
+    .cell{
+
+        width:78px;
+
+        height:78px;
+
+        border-radius:16px;
+
+    }
+
+    .mark{
+
+        font-size:2.2rem;
+
+    }
+
+    .score-num{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ==========================
+      Landscape Phones
+========================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .ttt-wrap{
+
+        max-width:900px;
+
+        flex-direction:row;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:14px;
+
+        padding:20px;
+
+    }
+
+    .ttt-title{
+
+        width:100%;
+
+        font-size:1.7rem;
+
+    }
+
+    .board{
+
+        gap:8px;
+
+    }
+
+    .cell{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .mark{
+
+        font-size:2rem;
+
+    }
+
 }

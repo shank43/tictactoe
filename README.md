@@ -39,12 +39,14 @@ tictactoe/
 ## How to Run Locally
 
 ### Option 1 — VS Code Live Server (recommended)
+
 1. Install [VS Code](https://code.visualstudio.com)
 2. Install the **Live Server** extension by Ritwick Dey
 3. Open the `tictactoe/` folder in VS Code
 4. Right-click `index.html` → **Open with Live Server**
 
 ### Option 2 — Python
+
 ```bash
 cd tictactoe
 python -m http.server 8000
@@ -52,6 +54,7 @@ python -m http.server 8000
 ```
 
 ### Option 3 — Node.js
+
 ```bash
 cd tictactoe
 npx serve .
@@ -67,23 +70,19 @@ npx serve .
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Markup | HTML5 |
+| Layer   | Technology                                 |
+| ------- | ------------------------------------------ |
+| Markup  | HTML5                                      |
 | Styling | CSS3 (custom properties, grid, animations) |
-| Logic | Vanilla JavaScript (ES6 modules pattern) |
-| Font | Space Grotesk + Space Mono (Google Fonts) |
-| AI | Minimax algorithm |
+| Logic   | Vanilla JavaScript (ES6 modules pattern)   |
+| Font    | Space Grotesk + Space Mono (Google Fonts)  |
+| AI      | Minimax algorithm                          |
 
 ## Admin / Game Controls
 
-| Button | Action |
-|---|---|
-| **↺ New Round** | Clears the board, keeps scores |
-| **Reset Scores** | Clears board and all scores |
-| **2 Players / vs CPU** | Switch game mode |
+| Button                   | Action                                |
+| ------------------------ | ------------------------------------- |
+| **↺ New Round**          | Clears the board, keeps scores        |
+| **Reset Scores**         | Clears board and all scores           |
+| **2 Players / vs CPU**   | Switch game mode                      |
 | **Easy / Medium / Hard** | Switch CPU difficulty (CPU mode only) |
-
----
-
-Built by Shashank · Kanpur, India
