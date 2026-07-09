@@ -62,12 +62,13 @@ const UI = (() => {
   }
 
   function setThinkingStatus() {
-    document.getElementById('status').innerHTML =
-      '<span style="color:var(--o-color)">CPU</span> thinking' +
+    document.getElementById("status").innerHTML =
+      '<i class="fa-solid fa-robot"></i> CPU Thinking ' +
       '<span class="thinking-dot"></span>' +
       '<span class="thinking-dot"></span>' +
       '<span class="thinking-dot"></span>';
-    document.getElementById('status').className = 'status-txt';
+
+    document.getElementById("status").className = "status-txt";
   }
 
   /* ── SCORES ── */

@@ -22,7 +22,7 @@ function startRound() {
   UI.updateScores(Game.getScores());
   UI.setActiveTurn('X');
   UI.renderHistory(Game.getHistory());
-  UI.setStatus("X's turn");
+  UI.setStatus('<i class="fa-solid fa-play"></i> X\'s Turn');
   UI.blockBoard(false);
 }
 
@@ -39,7 +39,7 @@ function resetAll() {
   UI.updateScores(Game.getScores());
   UI.setActiveTurn('X');
   UI.renderHistory(Game.getHistory());
-  UI.setStatus("X's turn");
+  UI.setStatus(`<i class="fa-solid fa-play"></i> ${next}'s Turn`);
   UI.blockBoard(false);
 }
 
