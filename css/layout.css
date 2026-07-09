@@ -1,0 +1,99 @@
+/* layout.css — Page and section layout */
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.ttt-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.5rem 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+/* Title */
+.ttt-title {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-align: center;
+}
+.ttt-title span {
+  color: var(--x-color);
+}
+
+/* Mode buttons row */
+.mode-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Difficulty row */
+.difficulty-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  display: none; /* shown via JS when CPU mode active */
+}
+
+/* Scoreboard */
+.score-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score-sep {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Status row */
+.status-row {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* Hint */
+.hint-row {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  text-align: center;
+  height: 18px;
+  transition: opacity 0.3s;
+}
+
+/* Buttons */
+.btn-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+/* History dots bar */
+.history-bar {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 340px;
+  min-height: 14px;
+}

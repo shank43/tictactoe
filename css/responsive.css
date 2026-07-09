@@ -1,0 +1,64 @@
+/* responsive.css — Mobile breakpoints */
+
+/* Small phones */
+@media (max-width: 420px) {
+  .cell {
+    width: 88px;
+    height: 88px;
+  }
+  .mark {
+    font-size: 2.3rem;
+  }
+  .score-box {
+    min-width: 68px;
+    padding: 0.6rem 1rem;
+  }
+  .score-num {
+    font-size: 1.6rem;
+  }
+  .ttt-title {
+    font-size: 1.3rem;
+  }
+  .history-bar {
+    max-width: 280px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 340px) {
+  .cell {
+    width: 76px;
+    height: 76px;
+  }
+  .mark {
+    font-size: 1.9rem;
+  }
+  .board {
+    gap: 5px;
+  }
+  .score-bar {
+    gap: 0.6rem;
+  }
+}
+
+/* Landscape phones — allow side-by-side layout */
+@media (max-height: 500px) and (orientation: landscape) {
+  .ttt-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  .ttt-title {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+  }
+  .mark {
+    font-size: 2rem;
+  }
+}

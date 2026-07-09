@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe — v2</title>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <main class="ttt-wrap">
+
+    <h1 class="ttt-title">TIC · <span>TAC</span> · TOE</h1>
+
+    <!-- Mode -->
+    <div class="mode-row">
+      <button class="mode-btn active" id="btn2p" onclick="setMode('2p')">2 Players</button>
+      <button class="mode-btn" id="btnCpu" onclick="setMode('cpu')">vs CPU</button>
+    </div>
+
+    <!-- Difficulty (shown only in CPU mode) -->
+    <div class="difficulty-row" id="diffRow">
+      <span class="diff-lbl">Difficulty:</span>
+      <button class="diff-btn active-easy" id="dEasy" onclick="setDiff('easy', this)">Easy</button>
+      <button class="diff-btn" id="dMed"  onclick="setDiff('medium', this)">Medium</button>
+      <button class="diff-btn" id="dHard" onclick="setDiff('hard', this)">Hard</button>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="score-bar">
+      <div class="score-box active-turn" id="scoreBoxX">
+        <div class="score-symbol score-sym-x">X</div>
+        <div class="score-num" id="sX">0</div>
+        <div class="score-lbl" id="lblX">Player 1</div>
+      </div>
+      <div class="score-sep">—</div>
+      <div class="score-box" id="scoreBoxDraw">
+        <div class="score-symbol score-sym-draw">·</div>
+        <div class="score-num" id="sDraw">0</div>
+        <div class="score-lbl">Draws</div>
+      </div>
+      <div class="score-sep">—</div>
+      <div class="score-box" id="scoreBoxO">
+        <div class="score-symbol score-sym-o">O</div>
+        <div class="score-num" id="sO">0</div>
+        <div class="score-lbl" id="lblO">Player 2</div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="status-row">
+      <div class="status-txt" id="status">X's turn</div>
+    </div>
+
+    <!-- Board -->
+    <div class="board" id="board"></div>
+
+    <!-- Hint -->
+    <div class="hint-row" id="hintRow"></div>
+
+    <!-- Controls -->
+    <div class="btn-row">
+      <button class="ctrl-btn" onclick="newRound()">↺ New Round</button>
+      <button class="ctrl-btn reset-all" onclick="resetAll()">Reset Scores</button>
+    </div>
+
+    <!-- Game history dots -->
+    <div class="history-bar" id="histBar" title="Game history — purple=X, red=O, gray=draw"></div>
+
+  </main>
+
+  <!-- Scripts — order matters -->
+  <script src="js/game.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

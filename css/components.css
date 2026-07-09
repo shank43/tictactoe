@@ -1,0 +1,195 @@
+/* components.css — All UI components */
+
+/* ── MODE BUTTONS ── */
+.mode-btn {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-mid);
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.mode-btn.active {
+  background: var(--x-color);
+  color: #fff;
+  border-color: var(--x-color);
+}
+.mode-btn:hover:not(.active) {
+  border-color: var(--x-color);
+  color: var(--x-color);
+}
+
+/* ── DIFFICULTY BUTTONS ── */
+.diff-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.diff-btn {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-mid);
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+  transition: all var(--transition);
+}
+.diff-btn:hover:not([class*="active"]) {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+.diff-btn.active-easy   { background: var(--easy);   color: #fff; border-color: var(--easy); }
+.diff-btn.active-medium { background: var(--medium);  color: #fff; border-color: var(--medium); }
+.diff-btn.active-hard   { background: var(--hard);    color: #fff; border-color: var(--hard); }
+
+/* ── SCORE BOX ── */
+.score-box {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.7rem 1.4rem;
+  text-align: center;
+  min-width: 84px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.score-box.active-turn {
+  border-color: var(--x-color);
+  box-shadow: 0 0 0 3px var(--x-glow);
+}
+.score-box.active-turn-o {
+  border-color: var(--o-color);
+  box-shadow: 0 0 0 3px var(--o-glow);
+}
+
+.score-symbol  { font-family: var(--font-display); font-size: 1rem; font-weight: 700; }
+.score-sym-x   { color: var(--x-color); }
+.score-sym-o   { color: var(--o-color); }
+.score-sym-draw{ color: var(--text-muted); }
+
+.score-num {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+}
+.score-lbl {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ── STATUS TEXT ── */
+.status-txt {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.status-txt.win-x { color: var(--x-color); font-weight: 700; }
+.status-txt.win-o { color: var(--o-color); font-weight: 700; }
+.status-txt.draw  { color: var(--text-mid); }
+
+/* CPU thinking dots */
+.thinking-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 50%;
+  margin: 0 2px;
+  vertical-align: middle;
+  animation: blink 1s 0.1s infinite;
+}
+.thinking-dot:nth-child(2) { animation-delay: 0.25s; }
+.thinking-dot:nth-child(3) { animation-delay: 0.40s; }
+
+/* ── BOARD CELL ── */
+.cell {
+  width: 108px;
+  height: 108px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: background var(--transition), border-color var(--transition), transform 0.12s;
+}
+.cell:hover:not(.taken):not(.blocked) {
+  background: var(--surface-2);
+  border-color: var(--border-strong);
+  transform: scale(1.04);
+}
+.cell.taken  { cursor: default; }
+.cell.blocked{ cursor: not-allowed; opacity: 0.6; }
+
+/* Win highlight */
+.cell.win-x { background: var(--x-bg); border-color: var(--x-border); }
+.cell.win-o { background: var(--o-bg); border-color: var(--o-border); }
+
+/* Draw fade */
+.cell.draw-fade { opacity: 0.55; transition: opacity 0.4s; }
+
+/* Marks inside cells */
+.mark {
+  font-family: var(--font-display);
+  font-size: 2.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.mark-x { color: var(--x-color); }
+.mark-o { color: var(--o-color); }
+
+/* ── CONTROL BUTTONS ── */
+.ctrl-btn {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-mid);
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+  transition: all var(--transition);
+}
+.ctrl-btn:hover {
+  border-color: var(--x-color);
+  color: var(--x-color);
+}
+.ctrl-btn.reset-all {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+.ctrl-btn.reset-all:hover {
+  border-color: var(--o-color);
+  color: var(--o-color);
+}
+
+/* ── HISTORY DOTS ── */
+.hist-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: transform 0.15s;
+  cursor: default;
+}
+.hist-dot:hover { transform: scale(1.5); }

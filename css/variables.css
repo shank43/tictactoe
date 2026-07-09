@@ -1,0 +1,54 @@
+/* variables.css — Design tokens */
+:root {
+  /* Fonts */
+  --font-display: 'Space Mono', monospace;
+  --font-body:    'Space Grotesk', sans-serif;
+
+  /* Brand colors */
+  --x-color:      #7c6ff7;
+  --x-bg:         rgba(124, 111, 247, 0.08);
+  --x-border:     rgba(124, 111, 247, 0.5);
+  --x-glow:       rgba(124, 111, 247, 0.12);
+
+  --o-color:      #f26c6c;
+  --o-bg:         rgba(242, 108, 108, 0.08);
+  --o-border:     rgba(242, 108, 108, 0.5);
+  --o-glow:       rgba(242, 108, 108, 0.12);
+
+  /* Neutrals */
+  --bg:           #f5f5f3;
+  --surface:      #ffffff;
+  --surface-2:    #f9f9f8;
+  --border:       #e5e5e2;
+  --border-strong:#d0d0cc;
+  --text:         #1a1a18;
+  --text-mid:     #5a5a56;
+  --text-muted:   #9a9a96;
+
+  /* Difficulty colors */
+  --easy:         #3b9e6a;
+  --medium:       #e09020;
+  --hard:         #c94040;
+
+  /* Misc */
+  --radius-sm:    6px;
+  --radius:       10px;
+  --shadow:       0 2px 12px rgba(0,0,0,0.07);
+  --transition:   0.15s ease;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:           #141412;
+    --surface:      #1e1e1c;
+    --surface-2:    #252523;
+    --border:       #2e2e2c;
+    --border-strong:#3e3e3a;
+    --text:         #f0f0ec;
+    --text-mid:     #a0a09a;
+    --text-muted:   #606060;
+  }
+
+  body { background: var(--bg); }
+}
